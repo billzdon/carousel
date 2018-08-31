@@ -61,16 +61,16 @@ const cardTarget = {
 		// When dragging upwards, only move when the cursor is above 50%
 		// Dragging downwards
 		if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
-			if (dragIndex < hoverIndex && hoverClientX < hoverClientX) {
+		//	if (dragIndex < hoverIndex && hoverClientX < hoverClientX) {
 				return
-			}
+		//	}
 		}
 
 		// Dragging upwards
 		if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
-			if (dragIndex > hoverIndex && hoverClientX > hoverClientX) {
+			//if (dragIndex > hoverIndex && hoverClientX > hoverClientX) {
 				return
-			}
+			//}
 		}
 
 		// Time to actually perform the action
@@ -99,22 +99,12 @@ const styles = {
 	card: {
 		padding: '0.5rem 1rem',
 		marginBottom: '.5rem',
-		backgroundColor: 'white',
+		//backgroundColor: 'white',
 		cursor: 'move',
 		display: 'inline-block',
 		float: 'left',
 		position: 'relative'
 	}
-}
-
-export interface CardProps {
-	id: any,
-  image: any,
-	index: number,
-	isDragging?: boolean,
-	connectDragSource?: ConnectDragSource,
-	connectDropTarget?: ConnectDropTarget,
-	moveCard: (dragIndex: number, hoverIndex: number) => void,
 }
 
 export default connect(mapAllToProps)(DropTarget(ItemTypes.CARD, cardTarget, (connect: DropTargetConnector) => ({
@@ -126,7 +116,7 @@ export default connect(mapAllToProps)(DropTarget(ItemTypes.CARD, cardTarget, (co
 		connectDragSource: connect.dragSource(),
 		isDragging: monitor.isDragging(),
 	}),
-)(class Card extends React.Component<CardProps> {
+)(class Card extends React.Component {
 	static contextTypes = {
     store: PropTypes.object
   }

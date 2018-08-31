@@ -31,7 +31,7 @@ const styles = {
     color: 'white'
   },
   smallIcon: {
-    paddingTop: '4px'
+    paddingTop: '3px'
   }
 }
 
@@ -57,7 +57,7 @@ export default withStyles(styles)(connect(mapAllToProps)(class Navbar extends Co
               <IconButton
                 color="inherit"
               >
-                <ViewModule/>
+                <ViewModule className={classes.smallIcon}/>
               </IconButton>
             </Link>
           </Tooltip>

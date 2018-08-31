@@ -13,14 +13,7 @@ const style = {
 	margin: '12px'
 }
 
-export interface ContainerState {
-	cards: Array<{
-		id: number,
-		image: any
-	}>
-}
-
-export default connect(mapAllToProps)(DragDropContext(HTML5Backend)(class ReorderGrid extends React.Component<{}, ContainerState> {
+export default connect(mapAllToProps)(DragDropContext(HTML5Backend)(class ReorderGrid extends React.Component {
   static contextTypes = {
     store: PropTypes.object
   }
