@@ -8,4 +8,5 @@ Carousel is built with react-slick.  Drag and drop is built with React-dnd.  UI 
 Images are saved into localstorage with react-persist and redux.
 
 Notes:\
-Local storage is quite limited so larger images or too many images will eventually break the frontend-cache system.
+Local storage is quite limited so larger images or too many images will eventually break the frontend-cache system.\
+Firefox doesn't cooperate with window dragging of images because it defaults to showing the image as a file in a new page.
